@@ -1,0 +1,243 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <title>云顶之奕主题站</title>
+</head>
+<body>
+
+<!-- 初始界面 -->
+<div id="Home">
+
+    <div class="title">欢迎来到云顶之弈</div>
+    <div class="coming-btn" href="#/main">进入主界面</div>
+
+</div>
+
+<!-- 登陆界面 -->
+<div id="login" style="display: none;">
+    <!-- 登录界面--同时也是隔离层--使登录界面置于最前 -->
+    <div class="login-page">
+        <div class="login-title">登陆/注册</div>
+        <div class="close iconfont icon-close"></div>
+        <!-- 登陆框表单 -->
+        <div class="login-form">
+            <div class="login-input">
+                <label>账&nbsp;&nbsp;&nbsp;&nbsp;号:</label>
+                <input type="text" placeholder="请输入账号" class="input-act">
+            </div>
+            <div class="login-input">
+                <label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                <input type="password" placeholder="请输入密码" class="input-pwd">
+            </div>
+        </div>
+        <!-- 登录注册按钮 -->
+        <input type="submit" id='login-submit' value="登陆">
+        <input id='regisiter' value="注册">
+    </div>
+    <!-- 隔离层2--退出登录界面 -->
+    <div class="login-page" style="display: none;">
+        <p class="login-message">
+            已登录
+        </p>
+        <div class="close iconfont icon-close"></div>
+        <div class="OK out">确定</div>
+        <div class="login-out out">退出登录</div>
+    </div>
+
+
+    <!-- 遮盖层 -->
+    <div class="bg"></div>
+</div> 
+
+<!-- 主界面 -->
+<div id="Main" style="display: none;">
+    <!-- 顶层组件 -->
+    <div class="top-menu">
+        <!-- 登录提示 -->
+        <div class="login-status">未登录...</div>
+        <!-- 登录令牌 -->
+        <div class="login-Ad iconfont icon-denglvlingpai"></div>
+        <!-- 管理员数据备份-恢复 -->
+        <div class="back-up" style="display: none;">数据恢复</div>
+        <div class="Administer-text" style="display: none;">----------管理员模式----------</div>
+    </div>
+    <!-- 主界面 -->
+    <div id="main-wrap">
+        <!-- 标题 -->
+        <h2>英雄</h2>
+        <!-- 主容器 -->
+        <div class="champion-box">
+            <!-- 搜索栏 -->
+            <div class="search-box clearfix">
+                <!-- 选择器 -->
+                <div class="select-box fl">
+                    <!-- 选项文本 -->
+                    <span class="select-text">费用</span>
+                    <span class="iconfont icon-xiangxia"></span>
+                    <!-- 下拉菜单 -->
+                    <ul class="select-options">
+                        <li value="-1">全部</li>
+                        <li value="1">1金币</li>
+                        <li value="2">2金币</li>
+                        <li value="3">3金币</li>
+                        <li value="4">4金币</li>
+                        <li value="5">5金币</li>
+                    </ul>
+                </div>
+                <div class="select-box fl">
+                    <span class="select-text">特质</span>
+                    <span class="iconfont icon-xiangxia"></span>
+                    <ul class="select-options">
+                        <li value="-1">全部</li>
+                        <li value="1">战斗学院</li>
+                        <li value="2">炼金科技</li>
+                        <li value="3">精密发条</li>
+                        <li value="4">执法官</li>
+                        <li value="5">变异战士</li>
+                        <li value="6">帝国</li>
+                        <li value="7">赏金猎人</li>
+                        <li value="8">极客</li>
+                        <li value="9">社交名流</li>
+                        <li value="10">辛迪加</li>
+                        <li value="11">约德尔人</li>
+                        <li value="12">姐妹</li>
+                        <li value="13">食神</li>
+                        <li value="14">猫猫</li>
+                        <li value="15">约德尔大王</li>
+                    </ul>
+                </div>
+                <div class="select-box fl">
+                    <span class="select-text">职业</span>
+                    <span class="iconfont icon-xiangxia"></span>
+                    <ul class="select-options">
+                        <li value="-1">全部</li>
+                        <li value="1">黑魔法师</li>
+                        <li value="2">刺客</li>
+                        <li value="3">格斗家</li>
+                        <li value="4">保镖</li>
+                        <li value="5">巨像</li>
+                        <li value="6">挑战者</li>
+                        <li value="7">白魔法师</li>
+                        <li value="8">发明家</li>
+                        <li value="9">圣盾使</li>
+                        <li value="10">学者</li>
+                        <li value="11">狙神</li>
+                        <li value="12">枪手</li>
+                        <li value="13">未来守护者</li>
+                    </ul>
+                </div>
+                <!-- 搜索框 -->
+                <div class="search-component fl">
+                    <input type="text"class="search-input" placeholder="搜索英雄...">
+                    <button href="javascript:" title="搜索" class="search-btn iconfont icon-sousuo"></button>
+                </div>
+            </div>
+            <!-- 卡片段 -->
+            <ul class="champion-list clearfix">
+                <!-- 卡片信息(改为动态生成) -->
+                <!-- <li class="champion-item">
+                    <div class="card-pic">
+                        <p class="fetter">
+                            <p>
+                                <div class="fetter-img"></div>
+                                <span class="fetter-fname"></span>
+                            </p>
+                        </p>
+                        <p class="fetter">
+                            <p>
+                                <div class="fetter-img"></div>
+                                <span class="fetter-name"></span>
+                            </p>
+                        </p>
+                        
+                    </div>
+                    <div class="card-info">
+                        <span class="name"> </span>
+                        <span class="price"><i class=".icon-jinbi"></i></span>
+                    </div>
+                </li> -->
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<!-- 详细界面 -->
+<div id="card-page" style="display: none;">
+    <!-- 卡片名 -->
+    <h2 class="card-title"></h2>
+    <!-- 卡片详细 -->
+    <div class="card-detail">
+        <!-- 内容块 -->
+        <div class="detail-info">
+            <!-- 英雄概述 -->
+            <div class="info1">
+                <div class="champion-pic"></div>
+                <div class="champion-icon-box">
+                    <div class="champion-icon"></div>
+                </div>
+                <!-- 技能 -->
+                <div class="skill">
+                    <!-- 技能名 -->
+                    <div class="skill-title">英雄技能</div>
+                    <!-- 技能详情 -->
+                    <div class="skill-info">
+                        <div class="skill-pic"></div>
+                        <div class="skill-text">
+                            <p class="skill-name"></p>
+                            <p class="skill-type"></p>
+                        </div>
+                        <div class="skill-desc"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 属性 -->
+            <div class="info2">
+                <div class="detail-box">
+                    <div class="detail-title">属性</div>
+                    <div class="detail-desc">
+                        <p>生命: <span></span></p>
+                        <p>护甲: <span></span></p>
+                        <p>魔抗: <span></span></p>
+                        <p>物攻: <span></span></p>
+                        <p>攻速: <span></span></p>
+                        <p>暴击率: <span></span></p>
+                        <p>攻击距离: <span></span></p>
+                        <p>初始法力值: <span></span></p>
+                        <p>法力值: <span></span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- 特质+羁绊 -->
+            <div class="info3">
+                <!-- 动态生成
+                <div class="detail-box">
+                    <div class="detail-title"><img src="" alt=""></div>
+                    <div class="detail-desc">
+                        <p class="desc-text"></p>
+                        动态生成
+                        <p class="fetter-desc-span">
+                            <span class="fetter-level"></span>
+                            
+                        </p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 管理员模式--右键删除按钮 -->
+<div class="delete" style="display: none;">删除</div>
+
+
+
+<script src="operation/interact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- 登陆界面 -->
+<div id="login">
+    <!-- 隔离层--使登录界面置于最前 -->
+    <div class="login-page">
+        <div class="login-title">登陆/注册</div>
+        <div class="close iconfont icon-close"></div>
+        <!-- 登陆框表单 -->
+        <div class="login-form">
+            <div class="login-input">
+                <label>账&nbsp;&nbsp;&nbsp;&nbsp;号:</label>
+                <input type="text" placeholder="请输入账号" class="input-act">
+            </div>
+            <div class="login-input">
+                <label>密&nbsp;&nbsp;&nbsp;&nbsp;码:</label>
+                <input type="password" placeholder="请输入密码" class="input-pwd">
+            </div>
+        </div>
+        <!-- 登录注册按钮 -->
+        <input type="submit" id='login-submit' value="登陆">
+        <input id='regisiter' value="注册">
+    </div>
+    <!-- 隔离层2--退出登录界面 -->
+    <div class="login-page" style="display: none;">
+        <p class="login-message">
+            已登录
+        </p>
+        <div class="close iconfont icon-close"></div>
+        <div class="OK out">确定</div>
+        <div class="login-out out">退出登录</div>
+    </div>
+    <!-- 遮盖层 -->
+    <div class="bg"></div>
+</div>
+    
+</body>
+</html>
