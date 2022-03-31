@@ -1,0 +1,17 @@
+北京	http://m.bj.bendibao.com/
+上海	http://m.sh.bendibao.com/
+广州	http://m.gz.bendibao.com/
+成都	http://m.cd.bendibao.com/
+杭州	http://m.hz.bendibao.com/
+重庆	http://m.cq.bendibao.com/
+西安	http://m.xa.bendibao.com/
+苏州	http://m.suzhou.bendibao.com/
+武汉	http://m.wh.bendibao.com/
+南京	http://m.nj.bendibao.com/
+天津	http://m.tj.bendibao.com/
+郑州	http://m.zz.bendibao.com/
+长沙	http://m.cs.bendibao.com/
+东莞	http://m.dg.bendibao.com/
+佛山	http://m.fs.bendibao.com/
+青岛	http://m.qd.bendibao.com/
+沈阳	http://m.sy.bendibao.com/
