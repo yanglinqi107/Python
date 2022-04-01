@@ -15,7 +15,7 @@ tree = etree.HTML(resp_text)
 key = tree.xpath('//input[@id="e"]/@value')[0]
 # print(key)
 node = execjs.get()
-ctx = node.compile(open('E:\\Js\\完美世界.js','r', encoding='gbk').read())
+ctx = node.compile(open('.\\Js\\完美世界.js','r', encoding='gbk').read())
 funcName = 'getPwd("{0}","{1}")'.format('123456',key)
 pwd = ctx.eval(funcName)
 print(pwd)

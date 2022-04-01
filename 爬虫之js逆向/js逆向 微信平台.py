@@ -18,7 +18,7 @@ import execjs
 node = execjs.get()
 
 # 2.js源文件编译
-ctx = node.compile(open('E:\\JS\\weixin.js',encoding='utf-8').read())
+ctx = node.compile(open('.\\JS\\weixin.js',encoding='utf-8').read())
 
 # 3.执行js函数
 funcName = 'getPwd("{0}")'.format('123456')

@@ -4,7 +4,7 @@
 
 import execjs
 node = execjs.get()
-ctx = node.compile(open(r'E:\JS\fanke.js',encoding='utf-8').read())
+ctx = node.compile(open(r'.\JS\fanke.js',encoding='utf-8').read())
 funcName = "md5('{0}')".format('123456')
 pwd = ctx.eval(funcName)
 print(pwd)
