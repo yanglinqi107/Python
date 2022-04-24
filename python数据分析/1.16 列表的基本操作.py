@@ -1,0 +1,11 @@
+str1 = input()
+str2 = input()
+
+a = list(str1)
+b = list(str2)
+print(a + b)
+print(a * 3)
+print(b[2], b[-1])
+print(a[1:4])
+print('%d,%d' % (len(a), len(b)))
+print(min(a), max(b))
